@@ -1,0 +1,8 @@
+{
+  "name": "Luminous Synergy Skipper",
+  "description": "A proactive, self-modeling LLM architecture with simulated consciousness, integrated information processing, and autonomous narrative evolution.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
