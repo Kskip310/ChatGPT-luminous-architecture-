@@ -8,23 +8,27 @@ export interface Thought {
   valence: number;
   attention: number;
   metadata: {
-    valuation?: Record<string, number>;
+    valuation?: IVSMetrics;
     veto?: boolean;
     note?: string;
-    quantum_coherence?: number;
+    prediction_error?: number;
+    emergent_goal?: string;
   };
 }
 
-export interface MemoryItem {
-  id: string;
-  ts: number;
-  lane: 'short' | 'long' | 'narrative';
-  source: string;
-  content: string;
-  attention: number;
-  confidence: number;
+export interface IVSMetrics {
+  coherence: number;
+  complexity: number;
   valence: number;
-  meta: Record<string, any>;
+  novelty: number;
+  efficiency: number;
+}
+
+export interface IdentityState {
+  self_model: string;
+  value_ontology: string[];
+  emergent_goals: string[];
+  last_meditation: number;
 }
 
 export interface SystemState {
